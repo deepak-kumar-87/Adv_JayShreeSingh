@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JayShree Singh | Advocate, India</title>
+  <meta name="description" content="JayShree Singh, Advocate practising before the High Court and District Courts in India. Civil, criminal, corporate, family, property and constitutional law.">
+  <meta name="theme-color" content="#0b1730">
+  <meta property="og:title" content="JayShree Singh | Advocate, India">
+  <meta property="og:description" content="Principled, strategic and client-focused legal representation across India.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* ================= TOKENS ================= */
+    :root {
+      --navy: #0b1730; --navy-2: #12285a; --royal: #2347b5;
+      --saffron: #ff9933; --green: #138808; --gold: #d4a437; --gold-2: #f3d27a;
+      --maroon: #8a1f45; --teal: #0e8c8c; --violet: #6d3fc4;
+      --bg: #ffffff; --bg-2: #f6f3ea; --card: #ffffff; --text: #1b2236; --muted: #667089; --line: #e8e3d4;
+      --shadow: 0 14px 40px rgba(11, 23, 48, .10);
+      --grad-gold: linear-gradient(135deg, #f3d27a, #d4a437 55%, #b5821b);
+      --grad-hero: linear-gradient(135deg, #0b1730 0%, #12285a 55%, #2a1b5c 100%);
+    }
+    [data-theme="dark"] {
+      --bg: #08111f; --bg-2: #0d1a2f; --card: #12213a; --text: #e8ecf5; --muted: #98a3bd; --line: #1f3050;
+      --shadow: 0 14px 40px rgba(0, 0, 0, .45);
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; transition: background .35s, color .35s; overflow-x: hidden; }
+    h1, h2, h3, h4, h5 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; color: var(--text); }
+    a { color: inherit; }
+    .text-gold { background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .flag-strip { position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 2001; background: linear-gradient(90deg, var(--saffron) 33%, #fff 33% 66%, var(--green) 66%); }
+    #progress { position: fixed; top: 4px; left: 0; height: 3px; width: 0; z-index: 2001; background: var(--grad-gold); }
+
+    /* ================= PRELOADER ================= */
+    #preloader { position: fixed; inset: 0; z-index: 3000; background: var(--navy); display: grid; place-items: center; transition: opacity .6s, visibility .6s; }
+    #preloader.hide { opacity: 0; visibility: hidden; }
+    #preloader svg { width: 110px; color: var(--gold); }
+    #preloader p { color: var(--gold-2); letter-spacing: 6px; text-transform: uppercase; font-size: .75rem; margin-top: 1rem; text-align: center; }
+
+    /* ================= BUTTONS ================= */
+    .btn { border-radius: 10px; font-weight: 500; letter-spacing: .3px; transition: all .25s ease; }
+    .btn-gold { background: var(--grad-gold); color: #1a1405; border: 0; box-shadow: 0 8px 22px rgba(212, 164, 55, .35); }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(212, 164, 55, .5); color: #1a1405; }
+    .btn-glass { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
+    .btn-glass:hover { background: rgba(255,255,255,.2); color: #fff; transform: translateY(-3px); }
+    .btn-navy { background: var(--navy-2); color: #fff; border: 0; }
+    .btn-navy:hover { background: var(--royal); color: #fff; transform: translateY(-3px); }
+
+    /* ================= NAV ================= */
+    #mainNav { padding: 1.2rem 0; top: 4px; transition: all .3s ease; }
+    #mainNav.scrolled, #mainNav.menu-open { background: rgba(11, 23, 48, .96); padding: .55rem 0; box-shadow: 0 6px 24px rgba(0,0,0,.25); backdrop-filter: blur(8px); }
+    .navbar-brand { display: flex; align-items: center; gap: .7rem; color: #fff; }
+    .navbar-brand:hover { color: #fff; }
+    .brand-mark { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--grad-gold); color: #1a1405; font-family: 'Playfair Display', serif; font-weight: 800; }
+    .brand-text { display: flex; flex-direction: column; line-height: 1.1; font-family: 'Playfair Display', serif; font-size: 1.15rem; }
+    .brand-text small { font-family: 'Inter', sans-serif; font-size: .62rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-2); margin-top: 3px; }
+    .navbar-toggler { border: 0; color: #fff; font-size: 1.8rem; padding: 0; }
+    .navbar-toggler:focus { box-shadow: none; }
+    .nav-link { color: rgba(255,255,255,.85) !important; font-size: .88rem; margin: 0 .2rem; position: relative; }
+    .nav-link::after { content: ''; position: absolute; left: .5rem; bottom: 2px; width: 0; height: 2px; background: var(--saffron); transition: width .25s; }
+    .nav-link:hover::after, .nav-link.active::after { width: calc(100% - 1rem); }
+    .nav-link.active { color: #fff !important; }
+    .theme-btn { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); color: #fff; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; transition: .25s; }
+    .theme-btn:hover { background: var(--gold); color: #1a1405; }
+    @media (max-width: 991px) { #mainNav { background: rgba(11,23,48,.97); } .navbar-collapse { padding: 1rem 0; } }
+
+    /* ================= HERO ================= */
+    .hero { position: relative; color: #fff; overflow: hidden; background: var(--grad-hero); }
+    .hero::before { content: ''; position: absolute; inset: 0; background:
+        radial-gradient(circle at 85% 15%, rgba(255,153,51,.28), transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(35,71,181,.55), transparent 45%),
+        radial-gradient(circle at 60% 60%, rgba(109,63,196,.25), transparent 40%); }
+    .hero::after { content: ''; position: absolute; inset: 0; opacity: .06; background-image: repeating-linear-gradient(90deg, #fff 0 1px, transparent 1px 70px); }
+    .hero .container { position: relative; z-index: 2; }
+    .hero h1 { color: #fff; font-size: clamp(2.3rem, 5.2vw, 4.1rem); line-height: 1.12; font-weight: 700; margin-bottom: 1.2rem; }
+    .hero .lead { color: rgba(255,255,255,.82); font-size: 1.08rem; max-width: 560px; font-weight: 300; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: .76rem; color: var(--gold-2); font-weight: 600; margin-bottom: 1rem; display: inline-flex; align-items: center; gap: .6rem; }
+    .eyebrow::before { content: ''; width: 34px; height: 2px; background: var(--saffron); }
+    .eyebrow.dark { color: var(--maroon); } [data-theme="dark"] .eyebrow.dark { color: var(--gold-2); }
+    .typed-wrap { font-size: 1.25rem; font-weight: 500; color: var(--saffron); min-height: 2rem; margin-bottom: 1rem; }
+    .typed-wrap .cursor { display: inline-block; width: 2px; height: 1.2em; background: var(--saffron); margin-left: 3px; vertical-align: -3px; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero-badges { margin-top: 2.4rem; display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; font-size: .84rem; color: rgba(255,255,255,.78); }
+    .hero-badges i { color: var(--gold-2); margin-right: .4rem; }
+    .scroll-down { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); color: var(--gold-2); font-size: 1.4rem; animation: bounce 2s infinite; text-decoration: none; z-index: 3; }
+    @keyframes bounce { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
+
+    /* hero illustration */
+    .hero-art { position: relative; width: 100%; max-width: 520px; aspect-ratio: 1/1; margin-inline: auto; }
+    .hero-art .glow { position: absolute; inset: 8%; border-radius: 50%; background: radial-gradient(circle, rgba(243,210,122,.35), transparent 65%); animation: pulse 5s ease-in-out infinite; }
+    @keyframes pulse { 50% { transform: scale(1.08); opacity: .75; } }
+    .hero-art .ring { position: absolute; inset: 4%; border-radius: 50%; border: 1px dashed rgba(243,210,122,.45); animation: spin 40s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .art-court { position: absolute; left: 6%; bottom: 8%; width: 88%; color: #dfe6f7; filter: drop-shadow(0 20px 30px rgba(0,0,0,.4)); }
+    .art-scales { position: absolute; top: 0; right: 4%; width: 36%; color: var(--gold-2); filter: drop-shadow(0 10px 20px rgba(0,0,0,.4)); animation: floaty 6s ease-in-out infinite; }
+    .art-gavel { position: absolute; left: 0; bottom: 0; width: 34%; color: var(--saffron); filter: drop-shadow(0 10px 18px rgba(0,0,0,.45)); animation: floaty 7s ease-in-out infinite reverse; }
+    @keyframes floaty { 50% { transform: translateY(-14px); } }
+    .portrait-tag { position: absolute; right: -2%; bottom: 2%; background: #fff; color: var(--navy); padding: .8rem 1.3rem; border-radius: 12px; box-shadow: var(--shadow); border-left: 5px solid var(--saffron); line-height: 1.3; }
+    .portrait-tag strong { display: block; font-family: 'Playfair Display', serif; }
+    .portrait-tag span { font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; color: #6b7385; }
+
+    /* ================= STATS ================= */
+    .stats { background: var(--navy); padding: 3.2rem 0; position: relative; }
+    .stats::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--saffron), var(--gold), var(--green), var(--royal), var(--maroon)); }
+    .stat { text-align: center; }
+    .stat .count, .stat .suffix { font-family: 'Playfair Display', serif; font-size: 2.9rem; font-weight: 700; background: var(--grad-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .stat p { margin: 0; font-size: .8rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,.7); }
+
+    /* ================= SECTIONS ================= */
+    .section { padding: 6rem 0; position: relative; }
+    .section-alt { background: var(--bg-2); }
+    .section-title { font-size: clamp(1.8rem, 3.6vw, 2.7rem); margin-bottom: 1rem; }
+    .section-sub { max-width: 640px; color: var(--muted); }
+    .section-dark { background: var(--grad-hero); color: #fff; overflow: hidden; }
+    .section-dark .section-title, .section-dark h4 { color: #fff; }
+
+    /* about */
+    .about-visual { position: relative; border-radius: 22px; padding: 2.4rem; background: linear-gradient(160deg, var(--navy-2), #3a1c6b); color: #fff; box-shadow: var(--shadow); overflow: hidden; }
+    .about-visual::before { content: ''; position: absolute; width: 260px; height: 260px; right: -80px; top: -80px; border-radius: 50%; background: radial-gradient(circle, rgba(255,153,51,.5), transparent 70%); }
+    .about-visual .scales-big { width: 150px; color: var(--gold-2); display: block; margin: 0 auto 1rem; position: relative; }
+    .about-visual blockquote { font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.55; margin: 0 0 1rem; position: relative; }
+    .about-visual cite { color: var(--gold-2); font-style: normal; font-size: .9rem; letter-spacing: 1px; }
+    .check-list { list-style: none; padding: 0; margin: 0; }
+    .check-list li { padding-left: 1.9rem; position: relative; margin-bottom: .55rem; font-size: .95rem; }
+    .check-list li::before { content: '\F26A'; font-family: 'bootstrap-icons'; color: var(--green); position: absolute; left: 0; }
+    .value-pill { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem 1rem; border-radius: 50px; font-size: .82rem; font-weight: 500; margin: 0 .4rem .5rem 0; color: #fff; }
+
+    /* forums */
+    .forum { border-radius: 16px; padding: 1.5rem 1.8rem; color: #fff; margin: 0 auto 1rem; display: flex; align-items: center; gap: 1.2rem; transition: transform .3s, box-shadow .3s; box-shadow: var(--shadow); }
+    .forum:hover { transform: scale(1.025); }
+    .forum i { font-size: 2rem; opacity: .95; }
+    .forum h4 { color: #fff; font-size: 1.15rem; margin: 0; }
+    .forum p { margin: 0; font-size: .85rem; opacity: .88; }
+    .forum.f1 { width: 70%; background: linear-gradient(135deg, #b5821b, #d4a437); } .forum.f1 h4, .forum.f1 p, .forum.f1 i { color: #1a1405; }
+    .forum.f2 { width: 80%; background: linear-gradient(135deg, #1c3a8f, #2f5fe0); }
+    .forum.f3 { width: 90%; background: linear-gradient(135deg, #0a6c6c, #14b8a6); }
+    .forum.f4 { width: 100%; background: linear-gradient(135deg, #7a1f45, #c2386b); }
+    @media (max-width: 767px) { .forum { width: 100% !important; } }
+    .chip { display: inline-block; padding: .3rem .8rem; border-radius: 50px; font-size: .78rem; margin: 0 .3rem .4rem 0; background: var(--card); border: 1px solid var(--line); color: var(--text); }
+
+    /* practice */
+    .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-bottom: 2.4rem; }
+    .filter-btn { border: 1px solid var(--line); background: var(--card); color: var(--text); padding: .5rem 1.3rem; border-radius: 50px; font-size: .88rem; font-weight: 500; transition: .25s; }
+    .filter-btn:hover { border-color: var(--saffron); }
+    .filter-btn.active { background: var(--navy-2); color: #fff; border-color: var(--navy-2); }
+    .practice-item { transition: opacity .35s, transform .35s; }
+    .practice-item.hidden { display: none; }
+    .practice-card { background: var(--card); padding: 2rem 1.8rem; border-radius: 18px; height: 100%; border: 1px solid var(--line); position: relative; overflow: hidden; transition: box-shadow .3s; transform-style: preserve-3d; }
+    .practice-card::after { content: ''; position: absolute; left: 0; bottom: 0; height: 4px; width: 100%; background: var(--c); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+    .practice-card:hover { box-shadow: var(--shadow); }
+    .practice-card:hover::after { transform: scaleX(1); }
+    .practice-card .icon { width: 60px; height: 60px; border-radius: 16px; display: grid; place-items: center; font-size: 1.6rem; color: #fff; background: var(--c); margin-bottom: 1.2rem; box-shadow: 0 10px 22px color-mix(in srgb, var(--c) 45%, transparent); }
+    .practice-card h3 { font-size: 1.25rem; }
+    .practice-card p { color: var(--muted); font-size: .93rem; margin-bottom: .8rem; }
+    .practice-card ul { padding-left: 1.1rem; margin: 0; font-size: .85rem; color: var(--muted); }
+
+    /* focus bars */
+    .bar-row { margin-bottom: 1.4rem; }
+    .bar-row .label { display: flex; justify-content: space-between; font-size: .88rem; margin-bottom: .35rem; color: rgba(255,255,255,.9); }
+    .bar { height: 10px; border-radius: 10px; background: rgba(255,255,255,.12); overflow: hidden; }
+    .bar span { display: block; height: 100%; width: 0; border-radius: 10px; transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
+    .why-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(6px); height: 100%; transition: .3s; }
+    .why-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+    .why-card i { font-size: 1.8rem; color: var(--gold-2); }
+    .why-card h5 { color: #fff; font-size: 1.05rem; margin: .6rem 0 .3rem; font-family: 'Inter', sans-serif; font-weight: 600; }
+    .why-card p { margin: 0; color: rgba(255,255,255,.72); font-size: .88rem; }
+    .section-dark .watermark { position: absolute; right: -60px; bottom: -40px; width: 420px; color: rgba(255,255,255,.05); pointer-events: none; }
+
+    /* timeline */
+    .timeline { position: relative; padding-left: 2rem; border-left: 2px solid var(--line); }
+    .timeline-item { position: relative; padding: 0 0 2.2rem 1.6rem; }
+    .timeline-item::before { content: ''; position: absolute; left: -2.62rem; top: .35rem; width: 16px; height: 16px; border-radius: 50%; background: var(--c, var(--saffron)); border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--c, var(--saffron)); }
+    .timeline-item .year { font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--c, var(--saffron)); font-weight: 700; }
+    .timeline-item h4 { font-size: 1.2rem; margin: .2rem 0 .4rem; }
+    .timeline-item p { color: var(--muted); margin: 0; }
+
+    /* process */
+    .step { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 2rem 1.6rem; height: 100%; position: relative; overflow: hidden; transition: .3s; }
+    .step:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
+    .step .num { font-family: 'Playfair Display', serif; font-size: 3.4rem; font-weight: 800; line-height: 1; color: var(--c); opacity: .9; }
+    .step h4 { font-size: 1.2rem; margin: .5rem 0; }
+    .step p { color: var(--muted); font-size: .92rem; margin: 0; }
+    .step::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--c); }
+
+    /* insights */
+    .insight-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; height: 100%; transition: .3s; display: flex; flex-direction: column; }
+    .insight-card:hover { box-shadow: var(--shadow); transform: translateY(-6px); }
+    .insight-cover { height: 140px; display: grid; place-items: center; color: rgba(255,255,255,.9); font-size: 3.2rem; background: var(--g); }
+    .insight-body { padding: 1.6rem; display: flex; flex-direction: column; flex: 1; }
+    .tag { align-self: flex-start; font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; padding: .25rem .75rem; border-radius: 50px; font-weight: 700; background: var(--bg-2); color: var(--maroon); } [data-theme="dark"] .tag { color: var(--gold-2); }
+    .insight-body h4 { font-size: 1.12rem; margin: .9rem 0 .5rem; }
+    .insight-body p { color: var(--muted); font-size: .9rem; flex: 1; }
+    .insight-body a { text-decoration: none; font-weight: 600; font-size: .88rem; color: var(--royal); } [data-theme="dark"] .insight-body a { color: var(--gold-2); }
+
+    /* booking */
+    .book-card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 2.4rem; box-shadow: var(--shadow); }
+    .mode-btn, .slot-btn { border: 1px solid var(--line); background: var(--bg-2); color: var(--text); border-radius: 12px; padding: .7rem 1rem; font-size: .88rem; transition: .2s; }
+    .mode-btn:hover, .slot-btn:hover { border-color: var(--saffron); }
+    .mode-btn.active, .slot-btn.active { background: var(--navy-2); color: #fff; border-color: var(--navy-2); box-shadow: 0 8px 18px rgba(18,40,90,.3); }
+    .book-summary { background: linear-gradient(135deg, var(--navy-2), #3a1c6b); color: #fff; border-radius: 22px; padding: 2.4rem; height: 100%; position: relative; overflow: hidden; }
+    .book-summary h4 { color: #fff; }
+    .book-summary ul { list-style: none; padding: 0; margin: 1.2rem 0; }
+    .book-summary li { display: flex; gap: .8rem; padding: .55rem 0; border-bottom: 1px dashed rgba(255,255,255,.2); font-size: .92rem; }
+    .book-summary li i { color: var(--gold-2); }
+    .form-control, .form-select { background-color: var(--bg-2); color: var(--text); border-color: var(--line); padding: .72rem 1rem; border-radius: 10px; }
+    .form-control:focus, .form-select:focus { background-color: var(--bg-2); color: var(--text); border-color: var(--saffron); box-shadow: 0 0 0 .2rem rgba(255,153,51,.2); }
+    .form-label { font-size: .84rem; font-weight: 500; }
+
+    /* faq */
+    .accordion-item { background: var(--card); border: 1px solid var(--line); border-radius: 12px !important; margin-bottom: .8rem; overflow: hidden; }
+    .accordion-button { font-family: 'Inter', sans-serif; font-weight: 500; background: var(--card); color: var(--text); }
+    .accordion-button:not(.collapsed) { background: var(--navy-2); color: #fff; box-shadow: none; }
+    .accordion-button:not(.collapsed)::after { filter: brightness(0) invert(1); }
+    .accordion-button:focus { box-shadow: 0 0 0 .2rem rgba(255,153,51,.25); }
+    [data-theme="dark"] .accordion-button::after { filter: invert(1); }
+    .accordion-body { color: var(--muted); }
+
+    /* contact */
+    .contact-info { background: var(--grad-hero); color: #fff; padding: 2.5rem; border-radius: 22px; height: 100%; }
+    .ci { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+    .ci > i { font-size: 1.3rem; color: var(--gold-2); margin-top: .2rem; }
+    .ci h5 { color: #fff; font-size: 1rem; margin: 0 0 .2rem; font-family: 'Inter', sans-serif; font-weight: 600; }
+    .ci p { margin: 0; color: rgba(255,255,255,.78); font-size: .93rem; }
+    .ci a { text-decoration: none; } .ci a:hover { color: var(--gold-2); }
+    .social { display: flex; gap: .7rem; margin-top: 1.8rem; }
+    .social a { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.3); border-radius: 50%; color: #fff; transition: .25s; text-decoration: none; }
+    .social a:hover { background: var(--gold); border-color: var(--gold); color: #1a1405; transform: translateY(-3px); }
+    .contact-form { background: var(--card); padding: 2.4rem; border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); }
+
+    /* footer */
+    .footer { background: #060d1b; color: rgba(255,255,255,.7); padding: 3.5rem 0 1.5rem; font-size: .9rem; position: relative; }
+    .footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--saffron) 33%, #fff 33% 66%, var(--green) 66%); }
+    .footer hr { border-color: rgba(255,255,255,.12); margin: 2rem 0 1.5rem; }
+    .footer-links a { text-decoration: none; margin-left: .9rem; } .footer-links a:hover { color: var(--gold-2); }
+    .disclaimer { font-size: .78rem; color: rgba(255,255,255,.5); max-width: 920px; }
+
+    /* floating */
+    .fab { position: fixed; right: 20px; z-index: 999; width: 50px; height: 50px; border-radius: 50%; border: 0; display: grid; place-items: center; font-size: 1.3rem; box-shadow: var(--shadow); transition: .3s; text-decoration: none; }
+    .fab-wa { bottom: 82px; background: #25d366; color: #fff; animation: pulseWa 2.4s infinite; }
+    @keyframes pulseWa { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.6); } 70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+    .fab-top { bottom: 22px; background: var(--grad-gold); color: #1a1405; opacity: 0; visibility: hidden; transform: translateY(10px); }
+    .fab-top.show { opacity: 1; visibility: visible; transform: none; }
+
+    /* reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; } }
+    @media (max-width: 575px) { .section { padding: 4rem 0; } .book-card, .book-summary, .contact-form, .contact-info { padding: 1.6rem; } .portrait-tag { right: 0; } }
+    @media print { #mainNav, .fab, .scroll-down, #preloader { display: none !important; } }
+  </style>
+</head>
+<body>
+
+<!-- ============ REUSABLE SVG ARTWORK ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Scales of Justice -->
+    <symbol id="scales" viewBox="0 0 200 220">
+      <rect x="62" y="202" width="76" height="10" rx="4" fill="currentColor"/>
+      <rect x="84" y="188" width="32" height="16" rx="3" fill="currentColor" opacity=".85"/>
+      <rect x="95" y="36" width="10" height="154" rx="3" fill="currentColor"/>
+      <circle cx="100" cy="30" r="10" fill="currentColor"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="-5 100 50;5 100 50;-5 100 50" dur="7s" repeatCount="indefinite"/>
+        <rect x="18" y="46" width="164" height="8" rx="4" fill="currentColor"/>
+        <circle cx="20" cy="50" r="6" fill="currentColor"/><circle cx="180" cy="50" r="6" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="2" opacity=".9">
+          <line x1="20" y1="54" x2="2" y2="126"/><line x1="20" y1="54" x2="38" y2="126"/>
+          <line x1="180" y1="54" x2="162" y2="126"/><line x1="180" y1="54" x2="198" y2="126"/>
+        </g>
+        <path d="M-2 126 H42 Q40 152 20 152 Q0 152 -2 126Z" fill="currentColor"/>
+        <path d="M158 126 H202 Q200 152 180 152 Q160 152 158 126Z" fill="currentColor"/>
+      </g>
+    </symbol>
+
+    <!-- Court building -->
+    <symbol id="court" viewBox="0 0 400 270">
+      <polygon points="14,74 200,8 386,74" fill="currentColor"/>
+      <polygon points="40,70 200,16 360,70" fill="#0b1730" opacity=".28"/>
+      <circle cx="200" cy="46" r="15" fill="none" stroke="#d4a437" stroke-width="3"/>
+      <g stroke="#d4a437" stroke-width="2"><line x1="200" y1="31" x2="200" y2="61"/><line x1="185" y1="46" x2="215" y2="46"/><line x1="189.4" y1="35.4" x2="210.6" y2="56.6"/><line x1="210.6" y1="35.4" x2="189.4" y2="56.6"/></g>
+      <rect x="24" y="76" width="352" height="16" rx="3" fill="currentColor"/>
+      <g fill="currentColor">
+        <rect x="44" y="96" width="30" height="8"/><rect x="104" y="96" width="30" height="8"/><rect x="164" y="96" width="30" height="8"/>
+        <rect x="206" y="96" width="30" height="8"/><rect x="266" y="96" width="30" height="8"/><rect x="326" y="96" width="30" height="8"/>
+        <rect x="50" y="104" width="18" height="102"/><rect x="110" y="104" width="18" height="102"/><rect x="170" y="104" width="18" height="102"/>
+        <rect x="212" y="104" width="18" height="102"/><rect x="272" y="104" width="18" height="102"/><rect x="332" y="104" width="18" height="102"/>
+        <rect x="44" y="206" width="30" height="8"/><rect x="104" y="206" width="30" height="8"/><rect x="164" y="206" width="30" height="8"/>
+        <rect x="206" y="206" width="30" height="8"/><rect x="266" y="206" width="30" height="8"/><rect x="326" y="206" width="30" height="8"/>
+      </g>
+      <g stroke="#0b1730" stroke-width="1.5" opacity=".25"><line x1="56" y1="104" x2="56" y2="206"/><line x1="116" y1="104" x2="116" y2="206"/><line x1="176" y1="104" x2="176" y2="206"/><line x1="218" y1="104" x2="218" y2="206"/><line x1="278" y1="104" x2="278" y2="206"/><line x1="338" y1="104" x2="338" y2="206"/></g>
+      <rect x="20" y="216" width="360" height="12" rx="2" fill="currentColor" opacity=".9"/>
+      <rect x="10" y="228" width="380" height="14" rx="2" fill="currentColor" opacity=".75"/>
+      <rect x="0" y="242" width="400" height="18" rx="2" fill="currentColor" opacity=".6"/>
+    </symbol>
+
+    <!-- Gavel -->
+    <symbol id="gavel" viewBox="0 0 220 170">
+      <rect x="10" y="146" width="150" height="18" rx="6" fill="currentColor" opacity=".7"/>
+      <g transform="rotate(-35 110 80)">
+        <rect x="52" y="28" width="104" height="46" rx="10" fill="currentColor"/>
+        <rect x="64" y="28" width="12" height="46" fill="#0b1730" opacity=".3"/>
+        <rect x="132" y="28" width="12" height="46" fill="#0b1730" opacity=".3"/>
+        <rect x="98" y="72" width="16" height="92" rx="7" fill="currentColor" opacity=".85"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="flag-strip"></div>
+<div id="progress"></div>
+
+<div id="preloader">
+  <div class="text-center">
+    <svg viewBox="0 0 200 220"><use href="#scales"/></svg>
+    <p>JayShree Singh &middot; Advocate</p>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#home"><span class="brand-mark">JS</span><span class="brand-text">JayShree Singh<small>Advocate</small></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courts">Courts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#practice">Practice</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item ms-lg-2"><button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-gold btn-sm px-4" href="#book">Book Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center min-vh-100 pt-5 gy-5">
+      <div class="col-lg-6">
+        <p class="eyebrow reveal">High Court &amp; District Courts of India</p>
+        <h1 class="reveal">Justice, argued with <span class="text-gold">clarity</span> and conviction.</h1>
+        <div class="typed-wrap reveal"><span id="typed"></span><span class="cursor"></span></div>
+        <p class="lead reveal">I am <strong>JayShree Singh</strong>, an advocate representing individuals, families and businesses with integrity, rigorous preparation and honest advice at every stage of their matter.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4 reveal">
+          <a href="#book" class="btn btn-gold btn-lg px-4"><i class="bi bi-calendar-check me-2"></i>Book a Consultation</a>
+          <a href="#practice" class="btn btn-glass btn-lg px-4">Practice Areas</a>
+        </div>
+        <ul class="hero-badges list-unstyled reveal">
+          <li><i class="bi bi-patch-check-fill"></i>Enrolled with State Bar Council</li>
+          <li><i class="bi bi-bank"></i>High Court &amp; District Courts</li>
+          <li><i class="bi bi-translate"></i>English &middot; Hindi</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 d-none d-lg-block">
+        <!-- To use a real photograph: replace this div's contents with <img src="jayshree.jpg" alt="JayShree Singh, Advocate" class="img-fluid rounded-4"> -->
+        <div class="hero-art reveal">
+          <div class="glow"></div><div class="ring"></div>
+          <svg class="art-court" viewBox="0 0 400 270"><use href="#court"/></svg>
+          <svg class="art-scales" viewBox="0 0 200 220"><use href="#scales"/></svg>
+          <svg class="art-gavel" viewBox="0 0 220 170"><use href="#gavel"/></svg>
+          <div class="portrait-tag"><strong>JayShree Singh</strong><span>Advocate</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-down" aria-label="Scroll to about"><i class="bi bi-chevron-double-down"></i></a>
+</header>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-md-3"><div class="stat"><span class="count" data-target="12">0</span><span class="suffix">+</span><p>Years in Practice</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat"><span class="count" data-target="500">0</span><span class="suffix">+</span><p>Matters Handled</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat"><span class="count" data-target="8">0</span><span class="suffix"></span><p>Practice Areas</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat"><span class="count" data-target="100">0</span><span class="suffix">%</span><p>Confidentiality</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 reveal">
+        <div class="about-visual">
+          <svg class="scales-big" viewBox="0 0 200 220"><use href="#scales"/></svg>
+          <blockquote>The law is not only about winning arguments. It is about protecting people when they are most vulnerable, and doing so with honesty.</blockquote>
+          <cite>&mdash; JayShree Singh</cite>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <p class="eyebrow dark">About</p>
+        <h2 class="section-title">A practice built on trust, preparation and results</h2>
+        <p>JayShree Singh is an advocate practising in India, appearing before the High Court and District Courts. She advises and represents clients in civil and criminal litigation, corporate and commercial disputes, family law, property and constitutional matters.</p>
+        <p>Her approach combines careful legal research with practical strategy. Every client receives a candid assessment, a clear plan and regular updates, so no one is left uncertain about where their matter stands.</p>
+        <div class="mb-3">
+          <span class="value-pill" style="background:var(--royal)"><i class="bi bi-shield-check"></i>Integrity</span>
+          <span class="value-pill" style="background:var(--maroon)"><i class="bi bi-eye"></i>Transparency</span>
+          <span class="value-pill" style="background:var(--teal)"><i class="bi bi-lightning-charge"></i>Responsiveness</span>
+          <span class="value-pill" style="background:var(--violet)"><i class="bi bi-bullseye"></i>Strategy</span>
+        </div>
+        <div class="row g-3">
+          <div class="col-sm-6"><ul class="check-list"><li>LL.B. &mdash; <em>[Institution, Year]</em></li><li>Enrolled &mdash; <em>[State Bar Council]</em></li></ul></div>
+          <div class="col-sm-6"><ul class="check-list"><li>Languages: English, Hindi</li><li>Member &mdash; <em>[Bar Association]</em></li></ul></div>
+        </div>
+        <a href="#book" class="btn btn-navy mt-3 px-4">Book a Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURTS ============ -->
+<section class="section section-alt" id="courts">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="eyebrow dark">Forums of Practice</p>
+      <h2 class="section-title">Representation across the Indian judiciary</h2>
+      <p class="section-sub mx-auto">From trial courts to constitutional benches, matters are prepared and argued at the right forum.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 reveal">
+        <div class="forum f1"><i class="bi bi-bank2"></i><div><h4>Supreme Court of India</h4><p>Appeals and special leave petitions, briefed through Advocate-on-Record</p></div></div>
+        <div class="forum f2"><i class="bi bi-columns-gap"></i><div><h4>High Courts</h4><p>Writs, appeals, revisions, bail and quashing petitions</p></div></div>
+        <div class="forum f3"><i class="bi bi-building"></i><div><h4>District &amp; Sessions Courts</h4><p>Civil suits, criminal trials, family and matrimonial proceedings</p></div></div>
+        <div class="forum f4"><i class="bi bi-diagram-3"></i><div><h4>Tribunals &amp; Commissions</h4><p>Consumer, RERA, NCLT, labour and other statutory forums</p></div></div>
+        <div class="mt-4 text-center">
+          <span class="chip">Mediation</span><span class="chip">Arbitration</span><span class="chip">Lok Adalat</span><span class="chip">Legal Notices</span><span class="chip">Drafting &amp; Vetting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRACTICE AREAS ============ -->
+<section class="section" id="practice">
+  <div class="container">
+    <div class="text-center mb-4 reveal">
+      <p class="eyebrow dark">Practice Areas</p>
+      <h2 class="section-title">Comprehensive legal representation</h2>
+      <p class="section-sub mx-auto">From first consultation through trial and appeal.</p>
+    </div>
+    <div class="filter-bar reveal" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="litigation">Litigation</button>
+      <button class="filter-btn" data-filter="advisory">Corporate &amp; Advisory</button>
+      <button class="filter-btn" data-filter="personal">Personal &amp; Family</button>
+    </div>
+    <div class="row g-4" id="practiceGrid">
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="litigation"><div class="practice-card tilt" style="--c:#2347b5"><div class="icon"><i class="bi bi-journal-text"></i></div><h3>Civil Litigation</h3><p>Recovery, injunctions, specific performance and contractual disputes.</p><ul><li>Money &amp; recovery suits</li><li>Injunctions &amp; declarations</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="litigation"><div class="practice-card tilt" style="--c:#8a1f45"><div class="icon"><i class="bi bi-shield-check"></i></div><h3>Criminal Defence</h3><p>Bail, quashing and trial defence protecting the rights of the accused.</p><ul><li>Regular &amp; anticipatory bail</li><li>Trials &amp; appeals</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="litigation"><div class="practice-card tilt" style="--c:#6d3fc4"><div class="icon"><i class="bi bi-bank"></i></div><h3>Constitutional &amp; Writ</h3><p>Public-law remedies for violation of fundamental and statutory rights.</p><ul><li>Writ petitions</li><li>Service &amp; administrative law</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="advisory"><div class="practice-card tilt" style="--c:#0e8c8c"><div class="icon"><i class="bi bi-briefcase"></i></div><h3>Corporate &amp; Commercial</h3><p>Contracts, partnership disputes, cheque bounce and commercial recovery.</p><ul><li>Drafting &amp; review</li><li>Section 138 NI Act</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="advisory"><div class="practice-card tilt" style="--c:#e07b00"><div class="icon"><i class="bi bi-house-door"></i></div><h3>Property &amp; Real Estate</h3><p>Title verification, sale and lease deeds, partition, tenancy and RERA.</p><ul><li>Due diligence</li><li>Partition &amp; tenancy</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="advisory"><div class="practice-card tilt" style="--c:#138808"><div class="icon"><i class="bi bi-hand-thumbs-up"></i></div><h3>Arbitration &amp; ADR</h3><p>Mediation, conciliation and arbitration to resolve disputes efficiently.</p><ul><li>Arbitration proceedings</li><li>Settlement strategy</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="personal"><div class="practice-card tilt" style="--c:#c2386b"><div class="icon"><i class="bi bi-people"></i></div><h3>Family &amp; Matrimonial</h3><p>Divorce, maintenance, custody and protection orders handled with discretion.</p><ul><li>Divorce &amp; maintenance</li><li>Child custody</li></ul></div></div>
+      <div class="col-md-6 col-lg-3 practice-item" data-cat="personal"><div class="practice-card tilt" style="--c:#d4a437"><div class="icon"><i class="bi bi-cart-check"></i></div><h3>Consumer Protection</h3><p>Complaints before Consumer Commissions against deficiency in service.</p><ul><li>Complaints &amp; appeals</li><li>Compensation claims</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOCUS / WHY ============ -->
+<section class="section section-dark" id="focus">
+  <svg class="watermark" viewBox="0 0 200 220"><use href="#scales"/></svg>
+  <div class="container position-relative">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 reveal">
+        <p class="eyebrow">Practice Focus</p>
+        <h2 class="section-title">Where the work happens</h2>
+        <p style="color:rgba(255,255,255,.75)">An indicative view of how professional time is distributed. Update these figures to reflect her actual practice.</p>
+        <div class="bar-row"><div class="label"><span>Civil &amp; Commercial</span><span>30%</span></div><div class="bar"><span data-w="30" style="background:linear-gradient(90deg,#2f5fe0,#6aa0ff)"></span></div></div>
+        <div class="bar-row"><div class="label"><span>Criminal</span><span>25%</span></div><div class="bar"><span data-w="25" style="background:linear-gradient(90deg,#c2386b,#ff7aa8)"></span></div></div>
+        <div class="bar-row"><div class="label"><span>Family &amp; Matrimonial</span><span>20%</span></div><div class="bar"><span data-w="20" style="background:linear-gradient(90deg,#d4a437,#f3d27a)"></span></div></div>
+        <div class="bar-row"><div class="label"><span>Property</span><span>15%</span></div><div class="bar"><span data-w="15" style="background:linear-gradient(90deg,#14b8a6,#6ee7d3)"></span></div></div>
+        <div class="bar-row"><div class="label"><span>Writ &amp; Constitutional</span><span>10%</span></div><div class="bar"><span data-w="10" style="background:linear-gradient(90deg,#6d3fc4,#b393f0)"></span></div></div>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-sm-6 reveal"><div class="why-card"><i class="bi bi-search"></i><h5>Research-driven</h5><p>Every argument is grounded in statute, precedent and the facts of your case.</p></div></div>
+          <div class="col-sm-6 reveal"><div class="why-card"><i class="bi bi-chat-dots"></i><h5>Clear communication</h5><p>Plain-language updates, so you always know the status and next steps.</p></div></div>
+          <div class="col-sm-6 reveal"><div class="why-card"><i class="bi bi-lock"></i><h5>Strict confidentiality</h5><p>Your information stays protected by professional privilege.</p></div></div>
+          <div class="col-sm-6 reveal"><div class="why-card"><i class="bi bi-globe-asia-australia"></i><h5>NRI &amp; remote clients</h5><p>Video consultations and e-documentation for clients anywhere in the world.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="eyebrow dark">Experience &amp; Credentials</p>
+      <h2 class="section-title">Professional journey</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="timeline">
+          <div class="timeline-item reveal" style="--c:#ff9933"><span class="year">Present</span><h4>Advocate &mdash; Independent Practice</h4><p>Representing clients before the High Court and District Courts across civil, criminal, family, corporate and property matters.</p></div>
+          <div class="timeline-item reveal" style="--c:#2347b5"><span class="year">[Year &ndash; Year]</span><h4>Associate Advocate &mdash; <em>[Chambers / Law Firm]</em></h4><p>Drafting pleadings, conducting research, assisting senior counsel and appearing in trial court proceedings.</p></div>
+          <div class="timeline-item reveal" style="--c:#138808"><span class="year">[Year]</span><h4>Enrolled with the <em>[State]</em> Bar Council</h4><p>Admitted to practise as an Advocate under the Advocates Act, 1961.</p></div>
+          <div class="timeline-item reveal" style="--c:#8a1f45"><span class="year">[Year]</span><h4>LL.B. &mdash; <em>[University / Law School]</em></h4><p>Legal education with focus on <em>[specialisations, moot court, internships, honours]</em>.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section section-alt" id="approach">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="eyebrow dark">How I Work</p>
+      <h2 class="section-title">A transparent, step-by-step approach</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 reveal"><div class="step" style="--c:#ff9933"><div class="num">01</div><h4>Consultation</h4><p>We discuss your situation in confidence and identify your goals and options.</p></div></div>
+      <div class="col-md-6 col-lg-3 reveal"><div class="step" style="--c:#2347b5"><div class="num">02</div><h4>Strategy</h4><p>Documents are reviewed and a candid legal strategy is outlined with realistic timelines.</p></div></div>
+      <div class="col-md-6 col-lg-3 reveal"><div class="step" style="--c:#138808"><div class="num">03</div><h4>Representation</h4><p>Thorough drafting, negotiation and courtroom advocacy on your behalf.</p></div></div>
+      <div class="col-md-6 col-lg-3 reveal"><div class="step" style="--c:#8a1f45"><div class="num">04</div><h4>Resolution</h4><p>Regular updates until resolution, followed by guidance on next steps.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section class="section" id="insights">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="eyebrow dark">Legal Insights</p>
+      <h2 class="section-title">Articles &amp; commentary</h2>
+      <p class="section-sub mx-auto">Sample topics. Replace with her own published articles or posts.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal"><article class="insight-card"><div class="insight-cover" style="--g:linear-gradient(135deg,#8a1f45,#e0527f)"><i class="bi bi-shield-lock"></i></div><div class="insight-body"><span class="tag">Criminal Law</span><h4>Understanding Bail: Your Rights and the Process</h4><p>A plain-language overview of regular and anticipatory bail and what courts consider.</p><a href="#book">Discuss this topic <i class="bi bi-arrow-right"></i></a></div></article></div>
+      <div class="col-md-4 reveal"><article class="insight-card"><div class="insight-cover" style="--g:linear-gradient(135deg,#e07b00,#ffb347)"><i class="bi bi-house-check"></i></div><div class="insight-body"><span class="tag">Property Law</span><h4>Before You Buy: A Property Due Diligence Checklist</h4><p>Key documents and checks to verify before purchasing residential or commercial property.</p><a href="#book">Discuss this topic <i class="bi bi-arrow-right"></i></a></div></article></div>
+      <div class="col-md-4 reveal"><article class="insight-card"><div class="insight-cover" style="--g:linear-gradient(135deg,#2347b5,#6d3fc4)"><i class="bi bi-people"></i></div><div class="insight-body"><span class="tag">Family Law</span><h4>Child Custody in India: What Courts Look For</h4><p>How the welfare of the child guides custody and visitation decisions.</p><a href="#book">Discuss this topic <i class="bi bi-arrow-right"></i></a></div></article></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="section section-alt" id="book">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="eyebrow dark">Book a Consultation</p>
+      <h2 class="section-title">Choose a time that suits you</h2>
+      <p class="section-sub mx-auto">Pick a mode, date and slot. Your request opens in WhatsApp or email for confirmation.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-7 reveal">
+        <form class="book-card" id="bookForm" novalidate>
+          <label class="form-label">1. Consultation mode</label>
+          <div class="d-flex flex-wrap gap-2 mb-4" id="modeGroup">
+            <button type="button" class="mode-btn active" data-v="In-person at chambers"><i class="bi bi-building me-1"></i>In-person</button>
+            <button type="button" class="mode-btn" data-v="Video call"><i class="bi bi-camera-video me-1"></i>Video call</button>
+            <button type="button" class="mode-btn" data-v="Phone call"><i class="bi bi-telephone me-1"></i>Phone call</button>
+          </div>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6"><label class="form-label" for="bDate">2. Preferred date</label><input type="date" class="form-control" id="bDate" required></div>
+            <div class="col-md-6"><label class="form-label" for="bArea">Area of law</label>
+              <select class="form-select" id="bArea" required><option value="">Select...</option><option>Civil Litigation</option><option>Criminal Defence</option><option>Family &amp; Matrimonial</option><option>Corporate &amp; Commercial</option><option>Property &amp; Real Estate</option><option>Constitutional &amp; Writ</option><option>Arbitration &amp; ADR</option><option>Consumer Protection</option><option>Other</option></select></div>
+          </div>
+          <label class="form-label">3. Time slot (IST)</label>
+          <div class="d-flex flex-wrap gap-2 mb-4" id="slotGroup">
+            <button type="button" class="slot-btn" data-v="10:00 AM">10:00 AM</button>
+            <button type="button" class="slot-btn" data-v="11:30 AM">11:30 AM</button>
+            <button type="button" class="slot-btn" data-v="2:00 PM">2:00 PM</button>
+            <button type="button" class="slot-btn" data-v="3:30 PM">3:30 PM</button>
+            <button type="button" class="slot-btn" data-v="5:00 PM">5:00 PM</button>
+          </div>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6"><label class="form-label" for="bName">Your name</label><input type="text" class="form-control" id="bName" required></div>
+            <div class="col-md-6"><label class="form-label" for="bPhone">Phone</label><input type="tel" class="form-control" id="bPhone" required></div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="submit" class="btn btn-gold px-4" data-ch="wa"><i class="bi bi-whatsapp me-2"></i>Request via WhatsApp</button>
+            <button type="submit" class="btn btn-navy px-4" data-ch="mail"><i class="bi bi-envelope me-2"></i>Request via Email</button>
+          </div>
+          <div id="bookMsg" class="small mt-3"></div>
+        </form>
+      </div>
+      <div class="col-lg-5 reveal">
+        <div class="book-summary">
+          <h4>What to expect</h4>
+          <p style="color:rgba(255,255,255,.8)">A focused first meeting to understand your matter and outline your options.</p>
+          <ul>
+            <li><i class="bi bi-clock-history"></i>About 30 minutes, confidential</li>
+            <li><i class="bi bi-folder2-open"></i>Bring relevant documents, notices and orders</li>
+            <li><i class="bi bi-cash-coin"></i>Fees explained and agreed in writing</li>
+            <li><i class="bi bi-calendar2-week"></i>Mon to Sat, 10 AM to 6 PM IST</li>
+          </ul>
+          <div id="bookPreview" class="p-3 rounded-3" style="background:rgba(255,255,255,.1);font-size:.9rem">Your selection will appear here.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="text-center mb-5 reveal"><p class="eyebrow dark">FAQ</p><h2 class="section-title">Common questions</h2></div>
+    <div class="row justify-content-center"><div class="col-lg-8 reveal">
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">How do I arrange a first consultation?</button></h3><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Use the booking form above, call, or message on WhatsApp. You will receive a confirmation for an in-person, phone or video meeting.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Is my information kept confidential?</button></h3><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. Communications between advocate and client are protected by professional confidentiality obligations.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Do you take matters outside your home city?</button></h3><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, depending on the matter. Remote consultations are available for clients across India and NRIs abroad.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">How are fees determined?</button></h3><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Fees depend on the complexity, forum and expected duration of the matter, and are agreed in writing before work begins.</div></div></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="text-center mb-5 reveal"><p class="eyebrow dark">Contact</p><h2 class="section-title">Let's discuss your matter</h2><p class="section-sub mx-auto">Share a few details and I will respond promptly. All enquiries are confidential.</p></div>
+    <div class="row g-4">
+      <div class="col-lg-5 reveal">
+        <div class="contact-info">
+          <div class="ci"><i class="bi bi-geo-alt"></i><div><h5>Chambers</h5><p>[Office Address]<br>[City, State, PIN], India</p></div></div>
+          <div class="ci"><i class="bi bi-telephone"></i><div><h5>Phone</h5><p><a href="tel:+910000000000">+91 00000 00000</a></p></div></div>
+          <div class="ci"><i class="bi bi-envelope"></i><div><h5>Email</h5><p><a href="mailto:contact@jayshreesingh.in">contact@jayshreesingh.in</a></p></div></div>
+          <div class="ci"><i class="bi bi-clock"></i><div><h5>Hours</h5><p>Mon &ndash; Sat: 10:00 AM &ndash; 6:00 PM IST</p></div></div>
+          <div class="social"><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <form id="contactForm" class="contact-form needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="name">Full name</label><input type="text" class="form-control" id="name" required minlength="2"><div class="invalid-feedback">Please enter your name.</div></div>
+            <div class="col-md-6"><label class="form-label" for="email">Email</label><input type="email" class="form-control" id="email" required><div class="invalid-feedback">Please enter a valid email.</div></div>
+            <div class="col-md-6"><label class="form-label" for="phone">Phone</label><input type="tel" class="form-control" id="phone" pattern="[0-9+\-\s]{7,15}" required><div class="invalid-feedback">Please enter a valid phone number.</div></div>
+            <div class="col-md-6"><label class="form-label" for="area">Area of law</label><select class="form-select" id="area" required><option value="">Select...</option><option>Civil Litigation</option><option>Criminal Defence</option><option>Family &amp; Matrimonial</option><option>Corporate &amp; Commercial</option><option>Property &amp; Real Estate</option><option>Constitutional &amp; Writ</option><option>Other</option></select><div class="invalid-feedback">Please choose an area.</div></div>
+            <div class="col-12"><label class="form-label" for="message">Brief description</label><textarea class="form-control" id="message" rows="4" required minlength="10"></textarea><div class="invalid-feedback">Please briefly describe your matter.</div></div>
+            <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="consent" required><label class="form-check-label small" for="consent">I understand that sending this form does not create an advocate&ndash;client relationship.</label><div class="invalid-feedback">Please acknowledge to continue.</div></div></div>
+            <div class="col-12"><button type="submit" class="btn btn-gold btn-lg px-5">Send Enquiry</button></div>
+          </div>
+          <div id="formAlert" class="alert alert-success mt-4 d-none" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6"><a class="navbar-brand" href="#home"><span class="brand-mark">JS</span><span class="brand-text">JayShree Singh<small>Advocate</small></span></a></div>
+      <div class="col-md-6 text-md-end"><ul class="list-inline mb-0 footer-links"><li class="list-inline-item"><a href="#about">About</a></li><li class="list-inline-item"><a href="#practice">Practice</a></li><li class="list-inline-item"><a href="#book">Book</a></li><li class="list-inline-item"><a href="#contact">Contact</a></li></ul></div>
+    </div>
+    <hr>
+    <p class="disclaimer"><strong>Disclaimer:</strong> In accordance with the rules of the Bar Council of India, this website is intended solely to provide information and is not solicitation or advertisement of any kind. Nothing here constitutes legal advice, and use of this website or sending an enquiry does not create an advocate&ndash;client relationship.</p>
+    <p class="mb-0 small">&copy; <span id="year"></span> JayShree Singh, Advocate. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="fab fab-wa" id="waFab" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<button class="fab fab-top" id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const WHATSAPP = '910000000000';            // country code + number, no + or spaces
+  const EMAIL = 'contact@jayshreesingh.in';   // change to the real email
+
+  $('#year').textContent = new Date().getFullYear();
+
+  // Preloader
+  const pre = $('#preloader');
+  const hidePre = () => pre.classList.add('hide');
+  window.addEventListener('load', () => setTimeout(hidePre, 700));
+  setTimeout(hidePre, 3500);
+
+  // Theme
+  const root = document.documentElement, themeBtn = $('#themeBtn');
+  const setTheme = t => {
+    root.setAttribute('data-theme', t);
+    themeBtn.innerHTML = t === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
+    try { localStorage.setItem('js-theme', t); } catch (e) {}
+  };
+  let saved = null; try { saved = localStorage.getItem('js-theme'); } catch (e) {}
+  setTheme(saved || 'light');
+  themeBtn.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+
+  // Scroll: nav, progress, active link, FAB
+  const nav = $('#mainNav'), progress = $('#progress'), toTop = $('#toTop');
+  const links = $$('.nav-link');
+  const secs = links.map(l => $(l.getAttribute('href'))).filter(Boolean);
+  const onScroll = () => {
+    const y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    nav.classList.toggle('scrolled', y > 60);
+    progress.style.width = (h > 0 ? y / h * 100 : 0) + '%';
+    toTop.classList.toggle('show', y > 500);
+    let cur = ''; secs.forEach(s => { if (y >= s.offsetTop - 160) cur = '#' + s.id; });
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === cur));
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Mobile menu
+  const menu = $('#navMenu');
+  menu.addEventListener('show.bs.collapse', () => nav.classList.add('menu-open'));
+  menu.addEventListener('hidden.bs.collapse', () => nav.classList.remove('menu-open'));
+  links.forEach(l => l.addEventListener('click', () => { if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide(); }));
+
+  // Typed text
+  const roles = ['Advocate', 'Civil & Criminal Litigator', 'Corporate Counsel', 'Family Law Advocate', 'Constitutional Lawyer'];
+  const typed = $('#typed'); let ri = 0, ci = 0, del = false;
+  (function type() {
+    const word = roles[ri];
+    typed.textContent = word.slice(0, ci);
+    if (!del && ci < word.length) { ci++; return setTimeout(type, 75); }
+    if (!del) { del = true; return setTimeout(type, 1500); }
+    if (ci > 0) { ci--; return setTimeout(type, 38); }
+    del = false; ri = (ri + 1) % roles.length; setTimeout(type, 350);
+  })();
+
+  // Reveal + counters + bars
+  const io = new IntersectionObserver((es, o) => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('visible'); o.unobserve(e.target);
+  }), { threshold: .12 });
+  $$('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 80 + 'ms'; io.observe(el); });
+
+  const cio = new IntersectionObserver((es, o) => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.target, t0 = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - t0) / 1600, 1);
+      el.textContent = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick); else el.textContent = target;
+    })(t0);
+    o.unobserve(el);
+  }), { threshold: .6 });
+  $$('.count').forEach(c => cio.observe(c));
+
+  const bio = new IntersectionObserver((es, o) => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    $$('.bar span', e.target).forEach(b => b.style.width = b.dataset.w + '%');
+    o.unobserve(e.target);
+  }), { threshold: .3 });
+  const focus = $('#focus'); if (focus) bio.observe(focus);
+
+  // Practice filter
+  $$('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+    $$('.filter-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active');
+    const f = btn.dataset.filter;
+    $$('.practice-item').forEach(it => it.classList.toggle('hidden', f !== 'all' && it.dataset.cat !== f));
+  }));
+
+  // 3D tilt on cards (pointer devices only)
+  if (matchMedia('(hover: hover)').matches) {
+    $$('.tilt').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        card.style.transform = `perspective(700px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-6px)`;
+      });
+      card.addEventListener('mouseleave', () => card.style.transform = '');
+    });
+  }
+
+  // Booking widget
+  const bDate = $('#bDate'), bArea = $('#bArea'), bName = $('#bName'), bPhone = $('#bPhone'), preview = $('#bookPreview'), bookMsg = $('#bookMsg');
+  const today = new Date(); today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  bDate.min = today.toISOString().split('T')[0];
+  let mode = 'In-person at chambers', slot = '';
+  const fmtDate = v => v ? new Date(v + 'T00:00:00').toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '';
+  const refresh = () => {
+    preview.innerHTML = `<strong>Mode:</strong> ${mode}<br><strong>Date:</strong> ${fmtDate(bDate.value) || 'Not chosen'}<br><strong>Time:</strong> ${slot || 'Not chosen'}<br><strong>Area:</strong> ${bArea.value || 'Not chosen'}`;
+  };
+  $$('#modeGroup .mode-btn').forEach(b => b.addEventListener('click', () => { $$('#modeGroup .mode-btn').forEach(x => x.classList.remove('active')); b.classList.add('active'); mode = b.dataset.v; refresh(); }));
+  $$('#slotGroup .slot-btn').forEach(b => b.addEventListener('click', () => { $$('#slotGroup .slot-btn').forEach(x => x.classList.remove('active')); b.classList.add('active'); slot = b.dataset.v; refresh(); }));
+  [bDate, bArea].forEach(el => el.addEventListener('change', refresh)); refresh();
+
+  let channel = 'wa';
+  $$('#bookForm [data-ch]').forEach(b => b.addEventListener('click', () => channel = b.dataset.ch));
+  $('#bookForm').addEventListener('submit', e => {
+    e.preventDefault();
+    if (!bDate.value || !slot || !bArea.value || !bName.value.trim() || !bPhone.value.trim()) {
+      bookMsg.className = 'small mt-3 text-danger'; bookMsg.textContent = 'Please choose a date, time slot, area of law and enter your name and phone.'; return;
+    }
+    const text = `Consultation request\nName: ${bName.value.trim()}\nPhone: ${bPhone.value.trim()}\nMode: ${mode}\nDate: ${fmtDate(bDate.value)}\nTime: ${slot} IST\nArea: ${bArea.value}`;
+    bookMsg.className = 'small mt-3 text-success'; bookMsg.textContent = 'Opening your request. Please send it to complete the booking.';
+    if (channel === 'wa') window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    else location.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Consultation request: ' + bArea.value)}&body=${encodeURIComponent(text)}`;
+  });
+
+  // Contact form
+  const form = $('#contactForm'), alertBox = $('#formAlert');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { e.stopPropagation(); form.classList.add('was-validated'); return; }
+    const v = id => document.getElementById(id).value.trim();
+    const body = `Name: ${v('name')}\nEmail: ${v('email')}\nPhone: ${v('phone')}\nArea of Law: ${v('area')}\n\n${v('message')}`;
+    location.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Enquiry: ' + v('area'))}&body=${encodeURIComponent(body)}`;
+    alertBox.textContent = 'Thank you. Your email app should open with your enquiry ready to send.';
+    alertBox.classList.remove('d-none'); form.reset(); form.classList.remove('was-validated');
+  });
+});
+</script>
+</body>
+</html>
